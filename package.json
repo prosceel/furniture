@@ -1,0 +1,36 @@
+{
+  "name": "furniture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy": "cp index.html dist/ && cp -R src/image dist/ && mkdir dist/dist && cp dist/index.css dist/dist/ && cp dist/index.js dist/dist/",
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "start": "mix watch --hot",
+    "prod": "npm run production && npm run copy",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prosceel/furniture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.27",
+    "normalize.css": "^8.0.1",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-mix": "^3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/prosceel/furniture/issues"
+  },
+  "homepage": "https://github.com/prosceel/furniture#readme"
+}
