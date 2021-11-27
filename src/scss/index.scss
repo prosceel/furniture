@@ -37,6 +37,7 @@ body {
     margin-right: 20px;
     background-color: white;
     flex-shrink: 0;
+    scroll-snap-align: start;
 
     &:nth-child(n + 2) {
       background-color: red;
@@ -57,7 +58,6 @@ body {
   overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scroll-snap-align: start;
 
   &::-webkit-scrollbar {
     display: none;
