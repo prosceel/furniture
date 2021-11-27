@@ -3,3 +3,64 @@
 body {
   background-color: black;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1680px;
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    z-index: 2;
+    top: 100px;
+
+    &--is-next {
+      right: 10px;
+      left: auto;
+    }
+  }
+
+  &__item {
+    width: 316px;
+    height: 200px;
+    margin-right: 20px;
+    background-color: white;
+    flex-shrink: 0;
+
+    &:nth-child(n + 2) {
+      background-color: red;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1680px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+
+  &::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+  }
+}
