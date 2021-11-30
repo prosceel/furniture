@@ -13,25 +13,54 @@
 
     <body>
         <header class="header">
-            <div class="slider">
-                <button class="slider__button slider__button--is-previous"></button>
-                <button class="slider__button slider__button--is-next"></button>
-                <div scroll-behavior="smooth" class="content">
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
-                    <div class="slider__item"></div>
+            <section class="header-info wrapper">
+                <div class="header-info-contacts">
+                    <span class="header-info-contacts__text">Ми в соціальних мережах:</span>
+                    <a href="/" class="header-info-contacts__link"><img
+                            class="header-info-contacts__logo header-info-contacts__logo--is-telegram"
+                            src="/src/image/telegram.svg" alt="telegram"></a>
+                    <a href="/" class="header-info-contacts__link"><img
+                            class="header-info-contacts__logo header-info-contacts__logo--is-facebook"
+                            src="/src/image/facebook.svg" alt="facebook"></a>
+                    <a href="/" class="header-info-contacts__link"><img
+                            class="header-info-contacts__logo header-info-contacts__logo--is-instagram"
+                            src="/src/image/instagram.svg" alt="instagram"></a>
+                    <div class="header-info-contacts-phone">
+                        <img class="header-info-contacts-phone__logo" src="/src/image/smartphone.svg" alt="smartphone">
+                        <a href="tel:+380991112233" class="header-info-contacts-phone__link">(099) 111 22 33</a>
+                        <img class="header-info-contacts-phone__arrow" src="/src/image/Arrow Left.svg" alt="arrow">
+                    </div>
                 </div>
-            </div>
+                <div class="header-info-navigation">
+                    <a href="/" class="header-info-navigation__link">головна</a>
+                    <a href="/" class="header-info-navigation__link">акції</a>
+                    <a href="/" class="header-info-navigation__link">доставка та оплата</a>
+                    <a href="/" class="header-info-navigation__link">про нас</a>
+                    <a href="/" class="header-info-navigation__link">контакти</a>
+                </div>
+            </section>
+            <div class="header__line"></div>
+            <section class="header-navigation wrapper"></section>
         </header>
-        <main class="main"></main>
+        <main class="main">
+            <!--  <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
+            </div>-->
+        </main>
         <footer class="footer"></footer>
     </body>
     <script type="text/javascript" src="dist/index.js" defer></script>

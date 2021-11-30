@@ -1,66 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
 @import "~normalize.css";
 
-body {
-  background-color: black;
+@import "/src/scss/variables";
+@import "/src/scss/header";
+
+html {
+  --wrapper-width: #{$wrapper-width};
+  --wrapper-padding: #{$wrapper-padding};
+
+  height: 100%;
+
+  @media (min-width: #{1210px + $wrapper-padding * 2}) {
+    --wrapper-width: #{$wrapper-width-wide};
+  }
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-}
-
-.slider {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
+.wrapper {
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
   width: 100%;
-  max-width: 1680px;
+  box-sizing: border-box;
 
-  &__button {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 10px;
-    z-index: 2;
-    top: 100px;
-
-    &--is-next {
-      right: 10px;
-      left: auto;
-    }
+  @media (min-width: #{1210px + $wrapper-padding * 2}) and (max-width: #{$wrapper-width-wide + $wrapper-padding * 2}) {
+    padding-left: $wrapper-padding;
+    padding-right: $wrapper-padding;
+    max-width: 100%;
   }
 
-  &__item {
-    width: 316px;
-    height: 200px;
-    margin-right: 20px;
+  @media (max-width: 1209px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: var(--wrapper-width);
+  }
+}
+
+.swiper {
+  width: 1680px;
+  max-width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  height: 300px;
+  background-color: red;
+  scroll-snap-align: start;
+
+  &:first-child {
     background-color: white;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-
-    &:nth-child(n + 2) {
-      background-color: red;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 
-.content {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1680px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
+.swiper-wrapper {
   scroll-snap-type: x mandatory;
-
-  &::-webkit-scrollbar {
-    display: none;
-    scrollbar-width: none;
-  }
 }
