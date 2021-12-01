@@ -1,0 +1,30 @@
+@mixin default-button {
+  height: 50px;
+  background-color: #44c697;
+  border-radius: 3px;
+  font-family: $monsterrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 2px solid #44c697;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 0 20px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #ffffff;
+    color: #44c697;
+    border: 2px solid #44c697;
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 3px rgb(68 198 151 / 50%);
+  }
+}
