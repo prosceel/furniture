@@ -3,7 +3,6 @@
 
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" />
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Furniture</title>
         <!--styles goes here-->
@@ -12,7 +11,7 @@
     </head>
 
     <body>
-        <header class="header">
+        <header class="header header--is-desktop">
             <section class="header-info wrapper">
                 <div class="header-info-contacts">
                     <span class="header-info-contacts__text">Ми в соціальних мережах:</span>
@@ -55,7 +54,8 @@
                     <li class="header-navigation__item"><a href="/" class="header-navigation__item-link">кухня</a><img
                             src="/src/image/Arrow Left.svg" class="header-navigation__item-arrow" alt="arrow"></li>
                 </ul>
-                <img src="/src/image/logo.svg" class="header-navigation__logo" alt="main-logo">
+                <a href="/" class="header-navigation__logo-link"><img src="/src/image/logo.svg"
+                        class="header-navigation__logo-item" alt="main-logo"></a>
                 <div class="header-navigation-call">
                     <button class="header-navigation-call__cart-button">
                         <img src="/src/image/shopping-cart.svg" class="header-navigation-call__cart-logo" alt="cart">
@@ -63,6 +63,87 @@
                     <button class="header-navigation-call__button">замовити дзвінок</button>
                 </div>
             </section>
+        </header>
+        <header class="header header--is-mobile mobile-header">
+            <div class="mobile-header__burger">
+                <span class="mobile-header__burger-item"></span>
+                <span class="mobile-header__burger-item"></span>
+                <span class="mobile-header__burger-item"></span>
+            </div>
+            <a href="/"><img src="/src/image/logo.svg" class="mobile-header__logo" alt="main-logo"></a>
+            <button class="mobile-header__cart"><img src="/src/image/shopping-cart.svg" class="mobile-header__cart-logo"
+                    alt="cart"></button>
+            <div class="mobile-header-navigation">
+                <section class="mobile-header-navigation-shop">
+                    <h3 class="mobile-header-navigation-shop__title">магазин</h3>
+                    <ul class="mobile-header-navigation-shop__list">
+                        <li class="mobile-header-navigation-shop__item">
+                            <span class="mobile-header-navigation-shop__item-text">дивани</span>
+                            <img src="/src/image/Arrow Left.svg" alt="arrow"
+                                class="mobile-header-navigation-shop__item-arrow">
+                        </li>
+                        <li class="mobile-header-navigation-shop__item">
+                            <span class="mobile-header-navigation-shop__item-text">ліжка</span>
+                            <img src="/src/image/Arrow Left.svg" alt="arrow"
+                                class="mobile-header-navigation-shop__item-arrow">
+                        </li>
+                        <li class="mobile-header-navigation-shop__item">
+                            <span class="mobile-header-navigation-shop__item-text">крісла</span>
+                            <img src="/src/image/Arrow Left.svg" alt="arrow"
+                                class="mobile-header-navigation-shop__item-arrow">
+                        </li>
+                        <li class="mobile-header-navigation-shop__item">
+                            <span class="mobile-header-navigation-shop__item-text">комоди</span>
+                            <img src="/src/image/Arrow Left.svg" alt="arrow"
+                                class="mobile-header-navigation-shop__item-arrow">
+                        </li>
+                        <li class="mobile-header-navigation-shop__item">
+                            <span class="mobile-header-navigation-shop__item-text">шафи</span>
+                            <img src="/src/image/Arrow Left.svg" alt="arrow"
+                                class="mobile-header-navigation-shop__item-arrow">
+                        </li>
+                        <li class="mobile-header-navigation-shop__item">
+                            <span class="mobile-header-navigation-shop__item-text">кухня</span>
+                            <img src="/src/image/Arrow Left.svg" alt="arrow"
+                                class="mobile-header-navigation-shop__item-arrow">
+                        </li>
+                    </ul>
+                </section>
+                <section class="mobile-header-navigation-site">
+                    <ul class="mobile-header-navigation-site__list">
+                        <li class="mobile-header-navigation-site__item"><a href="/"
+                                class="mobile-header-navigation-site__item-link">головна</a></li>
+                        <li class="mobile-header-navigation-site__item"><a href="/"
+                                class="mobile-header-navigation-site__item-link">акції</a></li>
+                        <li class="mobile-header-navigation-site__item"><a href="/"
+                                class="mobile-header-navigation-site__item-link">доставка та оплата</a></li>
+                        <li class="mobile-header-navigation-site__item"><a href="/"
+                                class="mobile-header-navigation-site__item-link">про нас</a></li>
+                        <li class="mobile-header-navigation-site__item"><a href="/"
+                                class="mobile-header-navigation-site__item-link">контакти</a></li>
+                        <li class="mobile-header-navigation-site__item">ми в соціальних мережах:</li>
+                    </ul>
+                    <ul class="mobile-header-navigation-site__social">
+                        <li class="mobile-header-navigation-site__social-item"><a href="/"
+                                class="mobile-header-navigation-site__social-item-link"><img
+                                    src="/src/image/telegram.svg"
+                                    class="mobile-header-navigation-site__social-item-link-logo" alt="logo"></a></li>
+                        <li class="mobile-header-navigation-site__social-item"><a href="/"
+                                class="mobile-header-navigation-site__social-item-link"><img
+                                    src="/src/image/facebook.svg"
+                                    class="mobile-header-navigation-site__social-item-link-logo" alt="logo"></a></li>
+                        <li class="mobile-header-navigation-site__social-item"><a href="/"
+                                class="mobile-header-navigation-site__social-item-link"><img
+                                    src="/src/image/instagram.svg"
+                                    class="mobile-header-navigation-site__social-item-link-logo" alt="logo"></a></li>
+                    </ul>
+                    <div class="mobile-header-navigation-site-phone">
+                        <img class="header-info-contacts-phone__logo" src="/src/image/smartphone.svg" alt="smartphone">
+                        <a href="tel:+380991112233" class="header-info-contacts-phone__link">(099) 111 22 33</a>
+                        <img class="header-info-contacts-phone__arrow" src="/src/image/Arrow Left.svg" alt="arrow">
+                    </div>
+                </section>
+            </div>
         </header>
         <main class="main">
             <!--  <div class="swiper">

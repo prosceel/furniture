@@ -4,6 +4,7 @@
 @import "/src/scss/variables";
 @import "/src/scss/mixin";
 @import "/src/scss/header";
+@import "/src/scss/mobile-header";
 
 html {
   --wrapper-width: #{$wrapper-width};
@@ -33,6 +34,24 @@ html {
     padding-right: 15px;
     max-width: var(--wrapper-width);
   }
+}
+
+.header {
+  &--is-desktop {
+    @media (max-width: 1209px) {
+      display: none;
+    }
+  }
+
+  &--is-mobile {
+    @media (min-width: 1210px) {
+      display: none;
+    }
+  }
+}
+
+.modal--is-opened {
+  overflow: hidden;
 }
 
 .swiper {

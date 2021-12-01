@@ -130,6 +130,7 @@
 
   &__item {
     margin-right: 20px;
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0;
@@ -152,8 +153,9 @@
     transform: rotate(-90deg);
   }
 
-  &__logo {
+  &__logo-link {
     margin-right: 75px;
+    margin-top: 5px;
   }
 }
 
