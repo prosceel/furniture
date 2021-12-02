@@ -1,16 +1,21 @@
 import Swiper from 'swiper/bundle';
 export default () => {
-new Swiper('.swiper', {
+/*new Swiper('.swiper', {
     direction: 'horizontal',
     loop: false,
-    spaceBetween: 30,
-    slidesPerView: 3,
-    mousewheel: true,
+    spaceBetween: 0,
+    slidesPerView: 1,
+    mousewheel: false,
     keyboard: true,
   
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  });
+    
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });*/
 }

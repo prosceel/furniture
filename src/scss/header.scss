@@ -156,6 +156,21 @@
   &__logo-link {
     margin-right: 75px;
     margin-top: 5px;
+
+    @media (max-width: 1819px) {
+      margin-right: 3.9vw;
+    }
+
+    @media (max-width: 1679px) {
+      margin-right: 0;
+    }
+  }
+
+  &__logo-item {
+    max-width: 360px;
+    @media (max-width: 1819px) {
+      width: 19vw;
+    }
   }
 }
 
@@ -198,5 +213,9 @@
     @include default-button;
     width: 278px;
     margin-right: 1px;
+
+    @media (max-width: 1819px) {
+      width: 14.4vw;
+    }
   }
 }
