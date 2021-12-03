@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 export default () => {
-/*new Swiper('.swiper', {
+new Swiper('.swiper', {
     direction: 'horizontal',
     loop: false,
     spaceBetween: 0,
@@ -17,5 +17,5 @@ export default () => {
       el: ".swiper-pagination",
       type: "fraction",
     },
-  });*/
+  });
 }
