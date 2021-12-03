@@ -31,4 +31,9 @@
   &:active {
     box-shadow: 0 0 0 3px rgb(68 198 151 / 50%);
   }
+
+  @media (max-width: 767px) {
+    height: 40px;
+    font-size: 14px;
+  }
 }

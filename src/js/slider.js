@@ -18,4 +18,7 @@ new Swiper('.swiper', {
       type: "fraction",
     },
   });
+
+  const slide = document.querySelector('.swiper-slide');
+  slide.removeAttribute("style");
 }
