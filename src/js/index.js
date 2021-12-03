@@ -1,8 +1,9 @@
-import 'swiper/css/bundle';
-import slider from './slider';
+import heroSlider from './heroSlider';
 import burgerButton from './mobileHeaderButger';
+import benefitsSlider from './benefitsSlider';
 
 document.addEventListener('DOMContentLoaded', () => {
-    slider()
     burgerButton()
+    heroSlider()
+    benefitsSlider()
 });

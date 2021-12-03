@@ -1,0 +1,134 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 102px 0 100px;
+
+  &__heading {
+    @include site-heading;
+  }
+}
+
+.benefits-slider {
+  margin-top: 55px;
+  width: 100%;
+  max-width: 100vw;
+
+  &__slide {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .benefits-slider__slide-texts {
+        transform: translate(0px, -61px);
+        &__text {
+          z-index: 2;
+        }
+      }
+
+      .benefits-slider__slide-texts-text {
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+
+  &__slide-texts {
+    position: absolute;
+    bottom: -25px;
+    left: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 21px;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__slide-texts-heading {
+    font-family: $monsterrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31px;
+    line-height: 1.25;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: -0.2px;
+    margin: 0 0 0 1px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #44c697;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      height: 3px;
+    }
+  }
+
+  &__slide-texts-text {
+    font-family: $monsterrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.35;
+    color: #ffffff;
+    z-index: -1;
+    letter-spacing: -0.2px;
+    transition: 0.3s ease-in-out;
+    transform: translate(0px, 50px);
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    margin-top: 0;
+    transform: translate(0px, -17px);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    right: 16px;
+    left: unset;
+  }
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    opacity: unset;
+    pointer-events: none;
+    cursor: auto;
+
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    path {
+      fill: #1e2e36;
+    }
+
+    &--is-next {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
