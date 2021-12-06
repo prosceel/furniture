@@ -16,28 +16,22 @@ html {
 
   height: 100%;
 
-  @media (min-width: #{1210px + $wrapper-padding * 2}) {
+  @media (min-width: 1680px) {
     --wrapper-width: #{$wrapper-width-wide};
+  }
+
+  @media (max-width: 767px) {
+    --wrapper-padding: #{$wrapper-padding-mobile};
   }
 }
 
 .wrapper {
-  max-width: var(--wrapper-width);
+  max-width: calc(var(--wrapper-width) + (var(--wrapper-padding) * 2));
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-
-  @media (min-width: #{1210px + $wrapper-padding * 2}) and (max-width: #{$wrapper-width-wide + $wrapper-padding * 2}) {
-    padding-left: $wrapper-padding;
-    padding-right: $wrapper-padding;
-    max-width: 100%;
-  }
-
-  @media (max-width: 1209px) {
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: var(--wrapper-width);
-  }
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
 }
 
 .header {
