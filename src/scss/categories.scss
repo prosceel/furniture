@@ -250,7 +250,9 @@
   }
 
   &__item {
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       transform: translate(0, -25px);
 
       .categories-products {

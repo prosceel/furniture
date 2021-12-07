@@ -188,11 +188,6 @@
     align-items: center;
     cursor: pointer;
     margin-right: 30px;
-
-    &:focus,
-    &:active {
-      outline: none;
-    }
   }
 
   &__cart-logo {

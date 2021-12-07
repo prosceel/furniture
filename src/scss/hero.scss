@@ -208,6 +208,11 @@
     &::after {
       display: none;
     }
+
+    &:hover {
+      border: 2px solid #1e2e36;
+      box-shadow: 0 0 0 3px rgb(30 46 54 / 50%);
+    }
   }
 
   .swiper-button-prev.swiper-button-disabled,
@@ -215,6 +220,7 @@
     background-color: #ffffff;
     border: 1px solid #1e2e36;
     opacity: unset;
+    cursor: not-allowed;
 
     path {
       fill: #1e2e36;

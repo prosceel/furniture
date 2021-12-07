@@ -102,7 +102,7 @@
     border: 1px solid #ffffff;
     opacity: unset;
     pointer-events: none;
-    cursor: auto;
+    cursor: not-allowed;
 
     path {
       fill: #ffffff;
@@ -119,6 +119,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease-in-out;
 
     path {
       fill: #1e2e36;
@@ -128,6 +129,11 @@
       svg {
         transform: rotate(-180deg);
       }
+    }
+
+    &:hover {
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 3px rgb(255 255 255 / 50%);
     }
   }
 }
