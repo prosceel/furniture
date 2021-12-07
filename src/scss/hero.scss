@@ -204,6 +204,7 @@
     left: unset;
     right: unset;
     margin-top: 0;
+    color: unset;
 
     &::after {
       display: none;
@@ -212,6 +213,14 @@
     &:hover {
       border: 2px solid #1e2e36;
       box-shadow: 0 0 0 3px rgb(30 46 54 / 50%);
+      background-color: rgb(30 46 54 / 90%);
+    }
+
+    &:focus,
+    &:active {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: rgb(30 46 54 / 50%);
     }
   }
 
@@ -220,6 +229,7 @@
     background-color: #ffffff;
     border: 1px solid #1e2e36;
     opacity: unset;
+    pointer-events: all;
     cursor: not-allowed;
 
     path {

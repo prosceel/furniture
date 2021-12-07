@@ -101,7 +101,7 @@
     background-color: transparent;
     border: 1px solid #ffffff;
     opacity: unset;
-    pointer-events: none;
+    pointer-events: all;
     cursor: not-allowed;
 
     path {
@@ -120,6 +120,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s ease-in-out;
+    color: unset;
 
     path {
       fill: #1e2e36;
@@ -134,6 +135,13 @@
     &:hover {
       border: 2px solid #ffffff;
       box-shadow: 0 0 0 3px rgb(255 255 255 / 50%);
+    }
+
+    &:focus,
+    &:active {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: #ffffff;
     }
   }
 }
