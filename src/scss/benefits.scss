@@ -7,6 +7,10 @@
   &__heading {
     @include site-heading;
   }
+
+  @media (max-width: 1209px) {
+    padding: 50px 0;
+  }
 }
 
 .benefits-slider {
@@ -29,6 +33,11 @@
         transform: translate(0px, 0px);
       }
     }
+
+    &-image {
+      width: 100%;
+      object-fit: contain;
+    }
   }
 
   &__slide-texts {
@@ -41,6 +50,11 @@
     align-items: flex-start;
     gap: 21px;
     transition: 0.3s ease-in-out;
+
+    @media (max-width: 1209px) {
+      bottom: -40px;
+      left: 15px;
+    }
   }
 
   &__slide-texts-heading {
@@ -63,6 +77,14 @@
       bottom: -5px;
       height: 3px;
     }
+
+    @media (max-width: 1209px) {
+      font-size: 23px;
+    }
+
+    @media (max-width: 374px) {
+      font-size: 20px;
+    }
   }
 
   &__slide-texts-text {
@@ -76,6 +98,14 @@
     letter-spacing: -0.2px;
     transition: 0.3s ease-in-out;
     transform: translate(0px, 50px);
+
+    @media (max-width: 1209px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 374px) {
+      font-size: 12px;
+    }
   }
 
   .swiper-button-prev,
@@ -87,6 +117,10 @@
     transform: translate(0px, -17px);
 
     &::after {
+      display: none;
+    }
+
+    @media (max-width: 1209px) {
       display: none;
     }
   }

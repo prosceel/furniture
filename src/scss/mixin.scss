@@ -60,4 +60,12 @@
     width: 20px;
     background-color: #44c697;
   }
+
+  @media (max-width: 767px) {
+    font-size: 33px;
+  }
+
+  @media (max-width: 374px) {
+    font-size: 30px;
+  }
 }

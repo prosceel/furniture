@@ -9,6 +9,16 @@ new Swiper ('.benefits-slider', {
     keyboard: true,
     slideClass: 'benefits-slider__slide',
     wrapperClass: 'benefits-slider__wrapper',
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+
+      1209: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
 
   
     navigation: {

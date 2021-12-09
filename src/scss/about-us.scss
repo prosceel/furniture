@@ -4,6 +4,10 @@
   align-items: center;
   padding: 102px 0;
 
+  @media (max-width: 1209px) {
+    padding: 50px 0;
+  }
+
   &__title {
     @include site-heading;
   }
@@ -14,6 +18,10 @@
     width: 100%;
     max-width: 100vw;
     margin-top: 53px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   &__text {
@@ -25,6 +33,20 @@
     background-color: #ffffff;
     box-sizing: border-box;
     padding: 51px 35px 50px 51px;
+
+    @media (max-width: 767px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      order: 2;
+      padding: 20px 15px;
+
+      &::after {
+        display: none;
+      }
+    }
 
     &::after {
       position: absolute;
@@ -59,5 +81,12 @@
   &__image {
     margin-left: auto;
     display: block;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      order: 1;
+    }
   }
 }
