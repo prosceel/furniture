@@ -14,7 +14,12 @@ new Swiper ('.benefits-slider', {
         slidesPerView: 1,
       },
 
-      1209: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+
+      1210: {
         slidesPerView: 3,
         spaceBetween: 30,
       }

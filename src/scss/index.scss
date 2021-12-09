@@ -23,7 +23,7 @@ html {
     --wrapper-width: #{$wrapper-width-wide};
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1209px) {
     --wrapper-padding: #{$wrapper-padding-mobile};
   }
 }

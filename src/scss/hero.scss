@@ -25,7 +25,7 @@
     width: 15px;
     background-color: #44c697;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1209px) {
       position: unset;
     }
   }
@@ -35,11 +35,11 @@
     left: unset;
     padding: 15px;
     width: 40%;
+    box-sizing: border-box;
   }
 
   @media (max-width: 767px) {
     width: 100%;
-    box-sizing: border-box;
   }
 
   &__type {
@@ -68,8 +68,12 @@
     color: #1e2e36;
 
     @media (max-width: 1209px) {
-      margin: 20px 0 0;
+      margin: 15px 0 0;
       font-size: 20px;
+    }
+
+    @media (max-width: 767px) {
+      margin: 20px 0 0;
     }
   }
 
@@ -86,7 +90,7 @@
     letter-spacing: -1.5px;
 
     @media (max-width: 1209px) {
-      font-size: 19px;
+      font-size: 18px;
     }
   }
 
@@ -97,7 +101,7 @@
     margin-top: 29px;
 
     @media (max-width: 1209px) {
-      width: 200px;
+      width: 180px;
       margin-top: 15px;
     }
   }
@@ -106,6 +110,10 @@
     margin-top: 50px;
 
     @media (max-width: 1209px) {
+      margin-top: 15px;
+    }
+
+    @media (max-width: 767px) {
       margin-top: 25px;
     }
   }
@@ -168,6 +176,10 @@
 }
 
 .hero-slider {
+  @media (min-width: 768px) and (max-width: 1209px) {
+    height: 300px;
+  }
+
   &__wrapper {
     display: flex;
     height: 100%;
@@ -175,9 +187,9 @@
 
     @media (min-width: 768px) and (max-width: 1209px) {
       position: absolute;
-      inset: 15% 15px 15% 40%;
-      height: 60%;
-      width: calc(100vw - 40% - 15px);
+      height: 240px;
+      width: calc(60% - 15px);
+      inset: 30px 15px 30px 40%;
     }
 
     @media (max-width: 767px) {
@@ -193,6 +205,17 @@
       max-width: 100%;
       margin-right: 15px;
       margin-left: 15px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1209px) {
+      max-width: calc(60vw - 15px);
+      height: 100%;
+      margin-left: calc(40vw + 15px);
+      margin-right: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 

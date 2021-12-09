@@ -79,6 +79,10 @@
     }
 
     @media (max-width: 1209px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 767px) {
       font-size: 23px;
     }
 
@@ -100,6 +104,10 @@
     transform: translate(0px, 50px);
 
     @media (max-width: 1209px) {
+      font-size: 11px;
+    }
+
+    @media (max-width: 767px) {
       font-size: 13px;
     }
 
