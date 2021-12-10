@@ -24,6 +24,9 @@
 
   &__image {
     margin-left: auto;
+    width: 100%;
+    max-width: 57vw;
+    object-fit: cover;
 
     @media (max-width: 1209px) {
       display: none;
@@ -38,6 +41,14 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1616px) {
+    padding: 50px 25px 15px 50px;
+  }
+
+  @media (max-width: 1309px) {
+    padding-left: 15px;
+  }
 
   @media (max-width: 1209px) {
     padding: 30px 15px 15px;
@@ -126,6 +137,10 @@
     padding: 0 0 0 86px;
     list-style-type: none;
 
+    @media (max-width: 1616px) {
+      padding-left: 30px;
+    }
+
     @media (max-width: 1209px) {
       margin-top: 0;
       padding: 0 0 0 20px;
@@ -177,6 +192,10 @@
 
       &--is-calendar {
         text-transform: none;
+
+        @media (max-width: 1389px) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -225,6 +244,10 @@
       text-decoration: none;
       line-height: 1.75;
       letter-spacing: 0.6px;
+
+      @media (max-width: 1389px) {
+        font-size: 13px;
+      }
     }
   }
 }
@@ -256,6 +279,14 @@
     letter-spacing: -0.3px;
     transform: translate(0px, 2px);
 
+    @media (max-width: 1616px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 1309px) {
+      font-size: 11px;
+    }
+
     @media (max-width: 767px) {
       &:first-child {
         order: 2;
@@ -277,6 +308,10 @@
       transform: translate(0px, -1px);
       line-height: 1.142;
       text-transform: uppercase;
+
+      @media (max-width: 1309px) {
+        font-size: 13px;
+      }
 
       @media (max-width: 767px) {
         font-size: 16px;
