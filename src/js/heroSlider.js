@@ -9,7 +9,7 @@ new Swiper('.hero-slider', {
     keyboard: true,
     slideClass: 'hero-slider__slide',
     wrapperClass: 'hero-slider__wrapper',
-  
+      
     navigation: {
       nextEl: '.hero-slider-description-buttons__item--is-next',
       prevEl: '.hero-slider-description-buttons__item--is-previous',
