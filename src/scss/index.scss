@@ -29,7 +29,7 @@ html {
 }
 
 .wrapper {
-  max-width: calc(var(--wrapper-width) + (var(--wrapper-padding) * 2));
+  max-width: calc(var(--wrapper-width));
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -37,6 +37,7 @@ html {
   @media (min-width: #{1210px + $wrapper-padding * 2}) {
     padding-left: var(--wrapper-padding);
     padding-right: var(--wrapper-padding);
+    max-width: calc (var(--wrapper-width) + ($wrapper-padding * 2));
   }
 }
 
