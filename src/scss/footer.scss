@@ -23,7 +23,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px rgba(68, 198, 151, 0.5);
+      @include box-shadow(rgba(68, 198, 151, 0.5));
     }
 
     @media (max-width: 1209px) {
@@ -117,7 +117,7 @@
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       left: -20px;
       top: 50%;
       width: 14px;
@@ -139,7 +139,7 @@
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       background-color: #44c697;
       height: 3px;
       width: 0%;

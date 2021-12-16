@@ -99,7 +99,7 @@
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       background-color: #44c697;
       left: 0;
       right: 0;
@@ -223,7 +223,7 @@
 
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px rgb(255, 255, 255, 0.5);
+      @include box-shadow(rgb(255, 255, 255, 0.5));
     }
   }
 }

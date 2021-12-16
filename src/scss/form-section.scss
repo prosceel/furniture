@@ -58,7 +58,7 @@
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       left: -15px;
       width: 15px;
       top: 0;
@@ -147,7 +147,7 @@
 
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px rgb(30 46 54 / 50%);
+      @include box-shadow(rgb(30, 46, 54, 0.5));
       outline: none;
     }
   }

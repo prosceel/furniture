@@ -59,7 +59,7 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     left: -5px;
     top: 3px;
     z-index: -1;
@@ -79,4 +79,10 @@
   @media (max-width: 374px) {
     font-size: 30px;
   }
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 0 0 3px $color;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 0 0 3px $color;
 }

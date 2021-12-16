@@ -21,7 +21,7 @@
     left: 0px;
     top: 0;
     bottom: 0;
-    content: "";
+    content: '';
     width: 15px;
     background-color: #44c697;
 
@@ -274,8 +274,8 @@
 
     &:focus,
     &:active {
+      @include box-shadow(rgb(30, 46, 54, 0.5));
       outline: none;
-      box-shadow: 0 0 0 3px rgb(30 46 54 / 50%);
     }
   }
 
