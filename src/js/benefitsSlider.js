@@ -9,6 +9,7 @@ new Swiper ('.benefits-slider', {
     keyboard: true,
     slideClass: 'benefits-slider__slide',
     wrapperClass: 'benefits-slider__wrapper',
+    
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -29,7 +30,11 @@ new Swiper ('.benefits-slider', {
       }
     },
 
-  
+    pagination: {
+      el: ".benefits-slider__pagination",
+      dynamicBullets: true,
+    },
+
     navigation: {
       nextEl: '.benefits-slider__button--is-next',
       prevEl: '.benefits-slider__button-is-prev',

@@ -16,6 +16,15 @@
     left: 36px;
     cursor: pointer;
     z-index: 10;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(68, 198, 151, 0.9);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(68, 198, 151, 0.5);
+    }
 
     @media (max-width: 1209px) {
       display: none;
@@ -126,6 +135,24 @@
     text-transform: uppercase;
     color: #ffffff;
     text-decoration: none;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #44c697;
+      height: 3px;
+      width: 0%;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
 
     @media (max-width: 1209px) {
       font-size: 14px;
@@ -136,6 +163,7 @@
     margin: 0;
     padding: 0 0 0 86px;
     list-style-type: none;
+    flex-shrink: 0;
 
     @media (max-width: 1616px) {
       padding-left: 30px;

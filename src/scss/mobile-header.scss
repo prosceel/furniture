@@ -132,7 +132,8 @@
     }
   }
 
-  &__item-text {
+  &__item-link {
+    text-decoration: none;
     order: 2;
     font-family: $monsterrat;
     font-style: normal;

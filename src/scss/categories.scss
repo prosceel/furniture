@@ -35,6 +35,36 @@
   }
 
   &__item {
+    &:nth-of-type(3) {
+      .categories-list__item-button {
+        transform: translate(3px, 0px);
+
+        @media (max-width: 1209px) {
+          transform: translate(0, 0);
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      .categories-list__item-button {
+        transform: translate(-7px, 0px);
+
+        @media (max-width: 1209px) {
+          transform: translate(0, 0);
+        }
+      }
+    }
+
+    &:nth-of-type(5) {
+      .categories-list__item-button {
+        transform: translate(-5px, 0px);
+
+        @media (max-width: 1209px) {
+          transform: translate(0, 0);
+        }
+      }
+    }
+
     @media (max-width: 1209px) {
       width: 100px;
       display: flex;
@@ -55,54 +85,6 @@
         width: 70px;
       }
     }
-
-    &:nth-child(3) {
-      transform: translate(3px, 0px);
-
-      @media (max-width: 1209px) {
-        transform: translate(0, 0);
-      }
-    }
-
-    &:nth-child(4) {
-      transform: translate(-3px, 0px);
-
-      span {
-        transform: translate(-4px, 0px);
-      }
-
-      @media (max-width: 1209px) {
-        transform: translate(0, 0);
-
-        span {
-          transform: translate(0, 0);
-        }
-      }
-    }
-
-    &:nth-child(5) {
-      span {
-        transform: translate(-5px, 0px);
-      }
-
-      @media (max-width: 1209px) {
-        span {
-          transform: translate(0, 0);
-        }
-      }
-    }
-
-    &:hover {
-      path {
-        fill: #44c697;
-      }
-
-      .categories-list__item-button-text {
-        &::after {
-          width: 100%;
-        }
-      }
-    }
   }
 
   &__item-button {
@@ -118,6 +100,18 @@
     path {
       fill: #1e2e36;
       transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      path {
+        fill: #44c697;
+      }
+
+      .categories-list__item-button-text {
+        &::after {
+          width: 100%;
+        }
+      }
     }
 
     &:focus,
@@ -151,6 +145,7 @@
     position: relative;
     transition: 0.3s ease-in-out;
     letter-spacing: -0.6px;
+    max-width: 120px;
 
     &::after {
       transition: 0.3s ease-in-out;
@@ -170,37 +165,66 @@
 }
 
 .categories-products {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
-  padding: 0;
   margin-top: 90px;
   margin-bottom: 51px;
 
-  @media (max-width: 1439px) {
-    grid-column-gap: 15px;
-    grid-row-gap: 25px;
+  .swiper-pagination {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 15px;
+
+    &-bullet {
+      &-active {
+        background-color: #44c697;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    overflow: visible;
   }
 
   @media (max-width: 1209px) {
     margin-top: 45px;
     margin-bottom: 25px;
-    grid-gap: 30px 15px;
+    padding: 0 15px;
   }
 
   @media (max-width: 767px) {
-    grid-auto-flow: column;
-    grid-auto-columns: calc(100vw - 30px);
-    overflow: scroll;
-    width: calc(100vw - 30px);
-    scroll-snap-type: x mandatory;
-    grid-template-columns: unset;
-    grid-template-rows: unset;
-    grid-gap: 0;
     margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    padding: 0;
+
+    @media (max-width: 1439px) {
+      grid-column-gap: 15px;
+      grid-row-gap: 25px;
+    }
+
+    @media (max-width: 1209px) {
+      grid-gap: 30px 15px;
+    }
+
+    @media (max-width: 767px) {
+      width: calc(100vw - 30px);
+      grid-gap: 0;
+      grid-template-columns: unset;
+      grid-template-rows: unset;
+      grid-auto-flow: column;
+    }
   }
 
   &__item {
@@ -215,6 +239,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    transition: 0.3s ease-in-out;
   }
 
   &__item-image {
@@ -230,6 +255,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 0;
+    margin: 0;
 
     &-type,
     &-sale {
@@ -422,7 +449,7 @@
     }
   }
 
-  &__item {
+  &__item-link {
     &:hover,
     &:focus,
     &:active {
